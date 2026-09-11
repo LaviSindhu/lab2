@@ -1,6 +1,6 @@
 public record DateList(SimpleDate first, DateList rest) {
 
-    // Purpose: return the number of dates in the list
+    //this return the number of dates in the list
     static int listLen(DateList dates) {
         return switch (dates) {
             case null -> 0;
@@ -10,8 +10,7 @@ public record DateList(SimpleDate first, DateList rest) {
     }
 
 
-    // Purpose: return the earliest date in the list,
-    // or null if the list is empty
+    // this return the earliest date in the list or null if the list is empty
     static SimpleDate minDate(DateList dates) {
         return switch (dates) {
             case null -> null;
@@ -29,9 +28,8 @@ public record DateList(SimpleDate first, DateList rest) {
     }
 
 
-    // Optional
-    // Purpose: return the latest date in the list,
-    // or null if the list is empty
+
+    // this returns the latest date in the list or null if the list is empty
     static SimpleDate maxDate(DateList dates) {
         return switch (dates) {
             case null -> null;
@@ -49,7 +47,7 @@ public record DateList(SimpleDate first, DateList rest) {
     }
 
 
-    // Purpose: return the shortest interval containing every date
+    // this returns the shortest interval containing every date
     static DateInterval dateCover(DateList dates) {
         return switch (dates) {
             case null -> null;
@@ -63,8 +61,7 @@ public record DateList(SimpleDate first, DateList rest) {
     }
 
 
-    // Purpose: return a new list where every date is changed
-    // to the following day
+    // this returns a new list where every date is changed to the next day
     static DateList allTomorrows(DateList dates) {
         return switch (dates) {
             case null -> null;
@@ -78,7 +75,7 @@ public record DateList(SimpleDate first, DateList rest) {
     }
 
 
-    // Purpose: add a new date to the end of the list
+    // this adds a new date to the end of the list
     static DateList addToEnd(DateList dates, SimpleDate newDate) {
         return switch (dates) {
             case null ->
@@ -93,8 +90,7 @@ public record DateList(SimpleDate first, DateList rest) {
     }
 
 
-    // Purpose: return all dates from the first list
-    // followed by all dates from the second list
+    // this returns all dates from the first list and followed by all dates from the second list
     static DateList append(DateList firstList, DateList secondList) {
         return switch (firstList) {
             case null -> secondList;

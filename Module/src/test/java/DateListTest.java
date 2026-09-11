@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class DateListTest {
 
-    // Three example lists
+
     DateList list1 = new DateList(
             new SimpleDate(2026, 5, 5),
             null

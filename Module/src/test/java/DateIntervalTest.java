@@ -3,7 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class DateIntervalTest {
 
-    // Three example intervals
+
     DateInterval interval1 = new DateInterval(
             new SimpleDate(2026, 1, 1),
             new SimpleDate(2026, 1, 5)

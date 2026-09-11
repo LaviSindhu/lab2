@@ -10,7 +10,7 @@ public record SimpleDate(int year, int month, int day) {
         }
     }
 
-    // Purpose: return the number of days in the given month
+    // this return the number of days in the given month
     static int daysInMonth(int month) {
         if (month < 1 || month > 12) {
             throw new IllegalArgumentException("Invalid month");
@@ -27,7 +27,7 @@ public record SimpleDate(int year, int month, int day) {
         return 31;
     }
 
-    // Purpose: return the date that comes one day after the given date
+    // this return the date that comes one day after the given date
     static SimpleDate tomorrow(SimpleDate date) {
         if (date.day() < daysInMonth(date.month())) {
             return new SimpleDate(
@@ -52,7 +52,7 @@ public record SimpleDate(int year, int month, int day) {
         );
     }
 
-    // Purpose: return the number of days that have passed since January 1
+    // this return the number of days that have passed since January 1
     static int dayOfYear(SimpleDate date) {
         int totalDays = 0;
 
@@ -63,7 +63,7 @@ public record SimpleDate(int year, int month, int day) {
         return totalDays + date.day() - 1;
     }
 
-    // Purpose: return true if date1 is before or the same as date2
+    // this return true if date1 is before or the same as date2
     static boolean comesBefore(SimpleDate date1, SimpleDate date2) {
         if (date1.year() < date2.year()) {
             return true;

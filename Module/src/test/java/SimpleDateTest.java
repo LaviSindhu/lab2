@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class SimpleDateTest {
 
-    // Three example dates
+
     SimpleDate date1 = new SimpleDate(2026, 1, 1);
     SimpleDate date2 = new SimpleDate(2026, 5, 15);
     SimpleDate date3 = new SimpleDate(2026, 12, 31);
