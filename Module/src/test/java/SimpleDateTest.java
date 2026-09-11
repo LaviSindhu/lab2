@@ -54,6 +54,14 @@ public class SimpleDateTest {
         assertFalse(SimpleDate.comesBefore(date3, date2));
 
         assertTrue(SimpleDate.comesBefore(date2, date2));
+
+        // Same year and month, but first date has a later day
+        assertFalse(
+                SimpleDate.comesBefore(
+                        new SimpleDate(2026, 5, 20),
+                        new SimpleDate(2026, 5, 15)
+                )
+        );
     }
 
     @Test
