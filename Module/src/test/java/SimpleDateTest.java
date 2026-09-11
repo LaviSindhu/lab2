@@ -68,4 +68,23 @@ public class SimpleDateTest {
                 () -> new SimpleDate(2026, 2, 30)
         );
     }
+    @Test
+    void testTomorrowEndOfMonth() {
+        assertEquals(
+                new SimpleDate(2026, 6, 1),
+                SimpleDate.tomorrow(new SimpleDate(2026, 5, 31))
+        );
+    }
+    @Test
+    void testComesBeforeMoreCases() {
+        assertTrue(SimpleDate.comesBefore(
+                new SimpleDate(2025, 12, 31),
+                new SimpleDate(2026, 1, 1)
+        ));
+
+        assertFalse(SimpleDate.comesBefore(
+                new SimpleDate(2026, 6, 1),
+                new SimpleDate(2026, 5, 1)
+        ));
+    }
 }

@@ -115,4 +115,8 @@ public class DateListTest {
                 )
         );
     }
+    @Test
+    void testDateCoverEmpty() {
+        assertNull(DateList.dateCover(null));
+    }
 }

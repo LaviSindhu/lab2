@@ -69,4 +69,24 @@ public class DateIntervalTest {
                 DateInterval.maybeDateIntervalIntersect(interval1, interval2)
         );
     }
+    @Test
+    void testIntersectReverseOrder() {
+        DateInterval a = new DateInterval(
+                new SimpleDate(2026, 1, 3),
+                new SimpleDate(2026, 1, 10)
+        );
+
+        DateInterval b = new DateInterval(
+                new SimpleDate(2026, 1, 1),
+                new SimpleDate(2026, 1, 5)
+        );
+
+        assertEquals(
+                new DateInterval(
+                        new SimpleDate(2026, 1, 3),
+                        new SimpleDate(2026, 1, 5)
+                ),
+                DateInterval.dateIntervalIntersect(a, b)
+        );
+    }
 }
