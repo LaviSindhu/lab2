@@ -57,12 +57,11 @@ public class SimpleDateTest {
 
         assertFalse(
                 SimpleDate.comesBefore(
-                        new SimpleDate(2026, 6, 1),
-                        new SimpleDate(2026, 5, 1)
+                        new SimpleDate(2027, 1, 1),
+                        new SimpleDate(2026, 12, 31)
                 )
         );
     }
-
     @Test
     void testInvalidDate() {
         assertThrows(
